@@ -1,0 +1,453 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#topic_names {
+background-color: #37474F;
+
+position: absolute;
+left: 0;
+top:0;
+height: 100vh;
+width: 350px;
+}
+#topic_names h4 {
+    color: white;
+    text-align: center;
+    width: 220px;
+    margin: 0 auto;
+    font-weight: lighter;
+    opacity: 0.5;
+}
+#topic_names p {
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 12px;
+    display: flex;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* asdsa */
+#topic_names #admin {
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 40px) ;
+    border: 1px solid white;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 5px 0 5px;
+    border-radius: 10px;
+
+    height: 30px;
+}
+#topic_names div#admin:hover {
+    transition: 0.5s;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+
+
+}
+/* sas */
+#topic_names p .emptyspan{
+    flex-grow: 1;
+}
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#categories {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right:0px;
+    left: 0px;
+}
+#book {
+    border: 1px solid white;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    padding: 15px 0 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+        
+
+}
+#book:hover {
+    transition: 0.5s;
+    background-color: white;
+    color: #00796B;
+    cursor: pointer;
+
+
+}
+.bookbook {
+    /* background-color: red; */
+    width: 100px;
+    height: 135px;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+
+    letter-spacing: 3px;
+}
+.bookbook::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: #37474F;
+    height: 100%;
+    bottom:0;
+    left:15px;
+}
+.bookbook::before{
+    content: "Book";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    color:white;
+    background-color: #37474F;
+    height: 40px;
+    font-size: 20px;
+    top:0;
+    left:0;
+}
+.bookbook span {
+    position: absolute;
+    width: 83px;
+    background-color: #37474F;
+    height: 20px;
+    bottom:0;
+    left:15px;
+}
+
+#book_show {
+    position:absolute;
+    top:0;
+    left:350px;
+    /* background-color: #B0BEC5 !important; */
+    height: 100vh;
+
+    width: calc(100vw - 350px);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    column-gap: 20px;
+    row-gap: 25px;
+    padding: 25px;
+}
+
+#book_show #book_entity{
+    text-align: center;
+    padding: 20px;
+    height: 180px;
+    /* background-color: red; */
+    /* border: 1px solid black; */
+    /* width : 300px; */
+    border-radius: 8px;
+}
+#book_show #book_entity #booktext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+
+    flex: 1;
+    /* background-color: gold; */
+}
+#book_show #book_entity #booktext div{
+    width :calc(100%);
+    position: relative;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 20px; */
+    margin-left: 20px;
+ 
+}
+
+#book_show #book_entity #booktext div:first-of-type::before{
+    content: "Title";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #26A69A;
+    width: 100%;
+    color: white;
+    
+}
+#book_show #book_entity:hover #booktext div:first-of-type::before{
+    background-color: #B2DFDB;
+    color: black;
+}
+#book_show #book_entity #booktext div::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #26A69A;
+    width: 100%;
+    height: 5px;
+    color: white;
+}
+/* #B2DFDB */
+#book_show #book_entity:hover #booktext div::after{
+    background-color: #B2DFDB;
+}
+#book_show #book_entity #booktext div:nth-child(2):before{
+    content: "Quantity";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #26A69A;
+    width: 100%;
+    font-size: 16px !important;
+    color: white;
+}
+#book_show #book_entity:hover #booktext div:nth-child(2):before{
+    background-color: #B2DFDB;
+    color: black;
+}
+#book_show #book_entity #booktext div:nth-child(3)::before{
+    content: "Price";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #26A69A;
+    width: 100%;
+    color: white;
+    font-size: 16px !important;
+}
+#book_show #book_entity:hover #booktext div:nth-child(3)::before{
+    background-color: #B2DFDB;
+    color: black;
+}
+#book_show #book_entity #booktext div:nth-child(4)::before{
+    content: "Buy";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #004D40;
+    width: 100%;
+    color: white;
+}
+#book_show #book_entity #booktext div:nth-child(5)::before{
+    content: "Update";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #004D40;
+    width: 100%;
+    color: white;
+}
+#book_show #book_entity #booktext div:nth-child(6)::before{
+    content: "Update";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #004D40;
+    width: 100%;
+    color: white;
+}
+#book_show #book_entity #booktext div:nth-child(4)::after,
+#book_show #book_entity #booktext div:nth-child(5)::after,
+#book_show #book_entity #booktext div:nth-child(6)::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #004D40;
+    width: 100%;
+    height: 5px;
+    color: white;
+}
+#book_entity {
+    display: flex;
+    color: black;
+    background-color: #B2DFDB;
+}
+
+#book_entity:hover {
+    display: flex;
+    color: black;
+    background-color: #4DB6AC;
+    color: white;
+    /* animation-name: smoooth;
+    animation-duration: 2s; */
+    padding-left: 0 ;
+    padding-right: 0 ;
+}
+@keyframes smoooth {
+    0%{
+        padding-left: 0 ;
+        padding-right: 0 ;
+    }
+    10%{
+        padding-left: 50px ;
+        padding-right: 50px ;
+    }
+    90%{
+        padding-left: 50px ;
+        padding-right: 50px ;
+    }
+    100%{
+        padding-left: 0 ;
+        padding-right: 0 ;
+    }
+}
+#book_entity:hover {
+    cursor:pointer;
+}
+#lastdiv,
+#updatequantity,
+#updateprice{
+    /* background-color: #7986CB;  */
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+   max-width: 90px;
+}
+#lastdiv:hover,
+#updatequantity:hover,
+#updateprice:hover{
+    background-color: #004D40;
+    color: white;
+}
+#book_show #book_entity #booktext div:nth-child(4):hover::before{
+    content: "";
+}
+#book_show #book_entity #booktext div:nth-child(5):hover::before{
+    content: "";
+}
+#book_show #book_entity #booktext div:nth-child(6):hover::before{
+    content: "";
+}
+#book_show #book_entity #booktext div:nth-child(2),div:nth-child(3){
+    font-size: 22px;
+    position: relative;
+}
+#book_show #book_entity #booktext div:nth-child(2) span {
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    bottom: -60px;
+    width: 150px;
+    height: 45px;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    animation-name: empty;
+    animation-duration: 4.1s;
+    
+}
+@keyframes empty {
+    0% {
+        opacity: 0;
+    }
+    10%{
+opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#book_show #book_entity #booktext div:nth-child(2) span::before {
+    content: "";
+    position: absolute;
+    /* background-color: grey; */
+    position: absolute;
+    left: 3px;
+    padding: 0;
+    margin: 0;
+    bottom: 45px;
+    /* width: 150px;
+    height: 40px; */
+    border: 10px solid black; 
+    border-color: transparent transparent black transparent;
+    
+}
+
+#book_entity {
+     animation-name: booken;
+    animation-duration: 0.5s; 
+}
+@keyframes booken {
+    0%{
+        margin: 50px;
+        opacity: 0.3;
+    }
+    100%{
+        margin: 0;
+        opacity: 1;
+    }
+}
+
+
+#success{
+    background-color: #2E7D32;
+    text-transform: none;
+    letter-spacing: normal;
+    width: calc(100% + 50px);
+    color: white;
+    font-weight:100;
+    position: absolute;
+    padding: 10px 0 10px;
+    left: 0;
+    bottom: -50px;
+    display: none;
+    animation-name: empty;
+    animation-duration: 4s;
+}
+#success::before{
+    content: "";
+    border: 10px solid;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    border-color: transparent transparent #2E7D32 transparent;
+    
+}
+
+/* #booktext #updatequantity{
+    display: none;
+
+}
+
+#booktext #updateprice{
+    display: none;
+} */
